@@ -41,7 +41,7 @@ export const getPosts = async () => {
 
 export const getCategories = async () => {
   const query = gql`
-    query GetCategories {
+    query GetGategories {
         categories {
           name
           slug
@@ -220,8 +220,8 @@ export const submitComment = async (obj) => {
 
 export const getComments = async (slug) => {
   const query = gql`
-    query GetComments($slug: String!) {
-      comments(where: {post: {slug: $slug}}){
+    query GetComments($slug:String!) {
+      comments(where: {post: {slug:$slug}}){
         name
         createdAt
         comment
