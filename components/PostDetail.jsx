@@ -1,5 +1,4 @@
 import React from 'react';
-
 import moment from 'moment';
 
 const PostDetail = ({ post }) => {
@@ -51,13 +50,14 @@ const PostDetail = ({ post }) => {
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-              <img
+              <a href="https://exp-portfolio.netlify.app/" target="_blank" rel="noreferrer"> <img
                 alt={post.author.name}
                 height="30px"
                 width="30px"
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
+              </a>
               <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
             </div>
             <div className="font-medium text-gray-700">
